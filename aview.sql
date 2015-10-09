@@ -2,7 +2,8 @@
 SQLyog Community Edition- MySQL GUI v8.04 
 MySQL - 5.5.16-log : Database - aview_ati
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
