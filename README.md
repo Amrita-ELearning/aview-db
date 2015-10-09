@@ -8,5 +8,6 @@ All information related to run aview like users, institutes, servers (for runnin
 
  Installation
 
-  Supported Platform
+  Supported Platform:
+  
   Ubuntu and Windows server
