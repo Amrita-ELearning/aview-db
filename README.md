@@ -2,6 +2,11 @@
 
 This is a server side component of aview software. It stores all data necessary for aview classroom.
 
+# License
+----------------
+The code in this repository is licensed under CC-BY-SA unless otherwise noted. Please follow the link for more details.
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
 Functionality
 -------------
 
