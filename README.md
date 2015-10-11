@@ -17,5 +17,6 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 Supported platforms: Ubuntu and Windows server
 * Install MYSQL 5.5.16
+* Create mysql user credentials with appropriate privilege to access the database. This user credentials should be added in the aview-server-tomcat (mysql.properties) file. 
 * Import aview.sql 
 * Import aview_audit.sql
