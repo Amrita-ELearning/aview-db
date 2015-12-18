@@ -1811,7 +1811,7 @@ CREATE TABLE `system_parameter` (
 
 /*Data for the table `system_parameter` */
 
-insert  into `system_parameter`(`parameter_id`,`parameter_name`,`parameter_value`,`status_id`,`created_by_user_id`,`created_date`,`modified_by_user_id`,`modified_date`) values (1,'EnablePhotoCapture','Yes',1,1,'2013-05-24 18:23:45',1,'2013-05-24 18:23:45'),(3,'AllowedCharactersForName','\\-a-zA-Z0-9&,.;:_\\()/+| ',1,1,'2013-06-05 15:06:30',1,'2013-06-05 15:06:30'),(4,'OnlineUserDirectoryServer','aview.atichennai.org.in',1,1,'2013-06-10 18:17:00',1,'2013-06-10 18:17:00'),(5,'QuizAnswerChoiceCount','10',1,1,'2015-07-25 17:21:58',1,'2015-07-25 17:21:58');
+insert  into `system_parameter`(`parameter_id`,`parameter_name`,`parameter_value`,`status_id`,`created_by_user_id`,`created_date`,`modified_by_user_id`,`modified_date`) values (1,'EnablePhotoCapture','Yes',1,1,'2013-05-24 18:23:45',1,'2013-05-24 18:23:45'),(3,'AllowedCharactersForName','\\-a-zA-Z0-9&,.;:_\\()/+| ',1,1,'2013-06-05 15:06:30',1,'2013-06-05 15:06:30'),(4,'OnlineUserDirectoryServer','localhost',1,1,'2013-06-10 18:17:00',1,'2013-06-10 18:17:00'),(5,'QuizAnswerChoiceCount','10',1,1,'2015-07-25 17:21:58',1,'2015-07-25 17:21:58');
 
 /*Table structure for table `topic` */
 
@@ -1882,8 +1882,9 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='User details.';
 
 /*Data for the table `user` */
-
-insert  into `user`(`user_id`,`institute_id`,`district_id`,`user_name`,`password`,`role`,`fname`,`lname`,`city`,`email`,`mobile_number`,`photo_capture_frequency_secs`,`institute_name`,`address`,`pincode`,`created_from`,`created_by_user_id`,`created_date`,`modified_by_user_id`,`modified_date`,`status_id`) values (1,1,271,'administrator','b3aca92c793ee0e9b1a9b0a5f5fc044e05140df3','MASTER_ADMIN','Master','Administrator','Cochin','dummy@dummyemail.com','1234567890',600,NULL,'gfghfh','756756','Client',1,'1900-12-31 00:00:00',1,'2013-06-20 11:28:49',1);
+/* Default password for master administrator is administrator. You can change this if required. Passwords are 
+   encrypted using SHA1 */
+insert  into `user`(`user_id`,`institute_id`,`district_id`,`user_name`,`password`,`role`,`fname`,`lname`,`city`,`email`,`mobile_number`,`photo_capture_frequency_secs`,`institute_name`,`address`,`pincode`,`created_from`,`created_by_user_id`,`created_date`,`modified_by_user_id`,`modified_date`,`status_id`) values (1,1,271,'administrator',SHA1('administrator'),'MASTER_ADMIN','Master','Administrator','Cochin','dummy@dummyemail.com','1234567890',600,NULL,'gfghfh','756756','Client',1,'1900-12-31 00:00:00',1,'2013-06-20 11:28:49',1);
 
 /*Table structure for table `user_action` */
 
@@ -1961,7 +1962,7 @@ CREATE TABLE `version` (
 
 /*Data for the table `version` */
 
-insert  into `version`(`version_id`,`client_version`,`supported`,`latest`,`description`,`release_type`) values (82,'A-VIEW_Classroom-3.7.10941',1,0,'Mobile',NULL),(84,'A-VIEW_Classroom-3.7.11114',1,0,'Web',NULL),(88,'A-VIEW_Classroom-3.7.10912',1,0,'AVC 3.7',NULL),(89,'A-VIEW_Classroom-3.7.10573',1,0,'Mobile1',NULL),(141,'A-VIEW_Classroom-3.7.11663',1,0,'AVCDEMO',NULL),(142,'A-VIEW_Classroom-4.0.14486',1,0,'AVC 4.0',NULL);
+insert  into `version`(`version_id`,`client_version`,`supported`,`latest`,`description`,`release_type`) values (1,'A-VIEW_Classroom-4.0.11511',1,0,'AVC 4.0',NULL);
 
 /*Table structure for table `website_feedback` */
 
